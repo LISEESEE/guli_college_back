@@ -15,7 +15,7 @@ public class CreateThread3 {
             add(0);
         } catch (Error e) {
             e.printStackTrace();
-            System.out.println(counter);
+            System.out.println(counter); //31457
         }
     }
 
@@ -23,5 +23,5 @@ public class CreateThread3 {
         ++counter;
         add(i + 1);
     }
-    //31457
+
 }

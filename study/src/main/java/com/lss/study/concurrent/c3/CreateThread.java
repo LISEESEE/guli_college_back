@@ -1,5 +1,8 @@
 package com.lss.study.concurrent.c3;
 
+/**
+ 线程的创建，线程名称自增规则，命名方式
+ */
 public class CreateThread {
     public static void main(String[] args) {
         Thread t1 = new Thread();

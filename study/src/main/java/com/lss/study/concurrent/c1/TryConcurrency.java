@@ -6,7 +6,7 @@ package com.lss.study.concurrent.c1;
 public class TryConcurrency {
 
     public static void main(String[] args) {
-        Thread t=new Thread("READ-Thread"){
+        Thread t = new Thread("READ-Thread") {
             @Override
             public void run() {
                 println(Thread.currentThread().getName());//main
@@ -16,7 +16,7 @@ public class TryConcurrency {
 
         t.start();
 
-        new Thread("WRITE-Thread"){
+        new Thread("WRITE-Thread") {
             @Override
             public void run() {
                 writeDataToFile();

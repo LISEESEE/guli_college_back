@@ -4,7 +4,7 @@ public class TaxCalculator {
     private final double salary;
     private final double bonus;
 
-    private static CalculatorStrategy calculatorStrategy;
+    private  CalculatorStrategy calculatorStrategy;
 
     public TaxCalculator(double salary, double bonus, CalculatorStrategy calculatorStrategy) {
         this.salary = salary;
@@ -23,9 +23,9 @@ public class TaxCalculator {
         return calculatorStrategy.calculator(salary,bonus);
     }
 
-//    public void setCalculatorStrategy(CalculatorStrategy calculatorStrategy) {
-//        this.calculatorStrategy = calculatorStrategy;
-//    }
+    public void setCalculatorStrategy(CalculatorStrategy calculatorStrategy) {
+        this.calculatorStrategy = calculatorStrategy;
+    }
 
     public double getSalary() {
         return salary;

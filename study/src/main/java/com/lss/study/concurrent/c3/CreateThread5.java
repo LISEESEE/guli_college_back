@@ -7,7 +7,7 @@ public class CreateThread5 {
     public static void main(String[] args) {
 
         try {
-            for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            for (int i = 0; i < 1000; i++) {
                 counter++;
                 new Thread(new Runnable() {
                     @Override
