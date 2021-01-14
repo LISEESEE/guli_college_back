@@ -1,5 +1,11 @@
 package com.lss.study.concurrent.c4;
 
+//守护线程
+
+/**
+ * A<---------------------------------->B
+ *  ->daemonThread(health check)
+ * */
 public class DaemonThread {
 
     public static void main(String[] args) throws InterruptedException {
