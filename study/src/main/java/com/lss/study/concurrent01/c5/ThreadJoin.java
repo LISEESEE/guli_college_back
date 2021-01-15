@@ -3,6 +3,7 @@ package com.lss.study.concurrent01.c5;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+//join ：join的线程全部运行完之后，别的线程才会开始运行
 public class ThreadJoin {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(() -> {
