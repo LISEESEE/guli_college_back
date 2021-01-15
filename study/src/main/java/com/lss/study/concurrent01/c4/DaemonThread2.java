@@ -15,7 +15,7 @@ public class DaemonThread2 {
                 }
             });
 
-            //innerThread.setDaemon(true);
+//            innerThread.setDaemon(true); 设置为守护线程，该线程会关闭
             innerThread.start();
 
             try {
