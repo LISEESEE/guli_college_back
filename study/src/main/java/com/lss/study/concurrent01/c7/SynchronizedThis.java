@@ -1,5 +1,6 @@
 package com.lss.study.concurrent01.c7;
 
+//this锁 锁住的是当前类
 public class SynchronizedThis {
     public static void main(String[] args) {
         ThisLock thisLock = new ThisLock();
@@ -12,7 +13,7 @@ class ThisLock{
     public void m1(){
         synchronized (this){
             try {
-                System.out.println(Thread.currentThread().getName());
+                System.out.println(Thread.currentThread().getName()+this.getClass());
                 Thread.sleep(10_000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -22,7 +23,7 @@ class ThisLock{
     public void m2(){
         synchronized (this){
             try {
-                System.out.println(Thread.currentThread().getName());
+                System.out.println(Thread.currentThread().getName()+this.getClass());
                 Thread.sleep(10_000);
             } catch (InterruptedException e) {
                 e.printStackTrace();

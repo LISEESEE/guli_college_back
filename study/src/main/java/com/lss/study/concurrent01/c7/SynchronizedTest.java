@@ -1,5 +1,6 @@
 package com.lss.study.concurrent01.c7;
 
+//synchronized 测试类 顺序执行
 public class SynchronizedTest {
 
     private final static Object LOCK = new Object();
@@ -9,7 +10,8 @@ public class SynchronizedTest {
         Runnable runnable = () -> {
             synchronized (LOCK) {
                 try {
-                    Thread.sleep(200_000);
+                    Thread.sleep(2_000);
+                    System.out.println(Thread.currentThread());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

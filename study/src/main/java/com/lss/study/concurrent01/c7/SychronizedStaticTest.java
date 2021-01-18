@@ -1,5 +1,6 @@
 package com.lss.study.concurrent01.c7;
 
+//静态同步代码块
 public class SychronizedStaticTest {
     public static void main(String[] args) {
         new Thread("T1") {

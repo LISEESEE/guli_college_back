@@ -2,6 +2,10 @@ package com.lss.study.concurrent01.c9;
 
 import java.util.*;
 
+/**
+ * 采集sevice
+ * 同时工作的线程不超过5个
+ */
 public class CaptureService {
     private final static LinkedList<Control> CONTROLS = new LinkedList();
     private final static Integer MAX_WORKER = 5;

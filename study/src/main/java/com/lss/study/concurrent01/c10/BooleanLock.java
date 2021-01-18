@@ -46,7 +46,7 @@ public class BooleanLock implements Lock {
     }
 
     @Override
-    public void unlock() {
+    public synchronized void unlock() {
         if (Thread.currentThread() == currentThread){
             this.initValue = false;
             Optional.of(Thread.currentThread().getName() + " release the lock monitor.")

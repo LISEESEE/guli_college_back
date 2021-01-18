@@ -30,8 +30,6 @@ public class LockTest {
     private static void work() throws InterruptedException {
         Optional.of(Thread.currentThread().getName() + " is Working...")
                 .ifPresent(System.out::println);
-        Thread.sleep(40_000);
-
-
+        Thread.sleep(4_000);
     }
 }
