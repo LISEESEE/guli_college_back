@@ -2,12 +2,6 @@ package com.lss.study.concurrent02.classloader.c1;
 
 public class Singleton {
 
-
-    public static int x = 0;
-
-    public static int y;
-    private static Singleton instance = new Singleton();
-
     /**
      *  public static int x = 0;
      *
@@ -19,6 +13,27 @@ public class Singleton {
      * int y = 0;
      * instance = null;
      */
+  /*  private static int x = 0;
+
+    private static int y;
+
+    private static Singleton instance = new Singleton();
+
+    private Singleton() {
+        x++;
+        y++;
+    }
+
+    public static Singleton getInstance() {
+        return instance;
+    }
+
+    public static void main(String[] args) {
+        Singleton singleton = getInstance();
+        System.out.println(singleton.x);//1
+        System.out.println(singleton.y);//1
+    }*/
+
 
     /**
      * private static Singleton instance = new Singleton();
@@ -39,6 +54,12 @@ public class Singleton {
      * x = 0;
      * y = 1;
      */
+    private static Singleton instance = new Singleton();
+
+    private static int x = 0;//x又把值从1修改为0
+
+    private static int y;
+
 
     private Singleton() {
         x++;
@@ -51,7 +72,12 @@ public class Singleton {
 
     public static void main(String[] args) {
         Singleton singleton = getInstance();
-        System.out.println(singleton.x);
-        System.out.println(singleton.y);
+        System.out.println(singleton.x);//0
+        System.out.println(singleton.y);//1
     }
+
+
+
+
+
 }

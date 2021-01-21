@@ -1,4 +1,4 @@
-package com.lss.study.concurrent02.classloader.c2;
+package com.lss.study.concurrent02.classloader.c1;
 
 import java.util.Random;
 
@@ -15,22 +15,21 @@ public class ClassActiveUse {
 //        System.out.println(Obj.salary);
 //        Obj.printSalary();
 
-//        Class.forName("com.wangwenjun.concurrent.classloader.chapter1.Obj");
-
+         Class.forName("com.lss.study.concurrent02.classloader.c1.Obj");
 
 //        System.out.println(Child.age);
 
-//        (1)通过子类访问父类的static变量，不会导致子类的初始化.
+//        (1)通过子类访问父类的static变量，不会导致子类和父类的初始化.
 //        System.out.println(Child.salary);
 
-        //(2）定义引用数组，不会初始化类
+        //(2）定义引用数组，不会初始化(Obj)类
 //        Obj[] arrays = new Obj[10];
 
 
         //(3)final修饰的常量会在编译期间放到常量池中，不会初始化类
 //        System.out.println(Obj.salary);
         //(4)final修饰的复杂类型，在编译期间无法计算得出，会初始化类
-        System.out.println(Obj.x);
+//        System.out.println(Obj.x);
     }
 
 
@@ -64,9 +63,10 @@ class Child extends Obj {
 
 interface I {
 
-    int a = 10;
+    int a = 10;//接口中的变量类型默认是静态的final的
 }
 
 //访问某个类或者接口的静态变量，或者对该静态变量进行赋值操作
-//1.对某个类的静态变来那个进行读写 ->class
+//1.对某个类的静态变量来那个进行读写 ->class
 //2.对接口中静态变量进行读取      ->interface
+
